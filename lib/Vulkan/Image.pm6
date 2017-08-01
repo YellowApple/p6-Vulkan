@@ -211,3 +211,17 @@ our enum Tiling (
   Optimal => 0,
   Linear => 1
 );
+
+our enum Layout (
+  Undefined => 0,
+  General => 1,
+  ColorAttachmentOptimal => 2,
+  DepthStencilAttachmentOptimal => 3,
+  DepthStencilReadOnlyOptimal => 4,
+  ShaderReadOnlyOptimal => 5,
+  TransferSrcOptimal => 6,
+  TransferDstOptimal => 7,
+  Preinitialized => 8,
+  PresentSrcKHR => 1000001002,
+  SharedPresentKHR => 1000111000
+);
