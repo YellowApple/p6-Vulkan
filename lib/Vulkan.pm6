@@ -46,3 +46,8 @@ our enum Error (
   OutOfPoolMemoryKHR => -1000069000,
   InvalidExternalHandleKHR => -1000072003,
 );
+
+our enum SharingMode (
+  Exclusive => 0,
+  Concurrent => 1
+);
