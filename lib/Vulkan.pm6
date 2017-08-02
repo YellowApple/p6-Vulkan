@@ -15,39 +15,39 @@ constant MaxExtensionNameSize = 256;
 constant MaxDescriptionSize = 256;
 
 our enum Result (
-  Success => 0,
-  NotReady => 1,
-  Timeout => 2,
-  EventSet => 3,
-  EventReset => 4,
-  Incomplete => 5,
-  SuboptimalKHR => 1000001003
+    Success => 0,
+    NotReady => 1,
+    Timeout => 2,
+    EventSet => 3,
+    EventReset => 4,
+    Incomplete => 5,
+    SuboptimalKHR => 1000001003
 );
 
 our enum Error (
-  OutOfHostMemory => -1,
-  OutOfDeviceMemory => -2,
-  InitializationFailed => -3,
-  DeviceLost => -4,
-  MemoryMapFailed => -5,
-  LayerNotPresent => -6,
-  ExtensionNotPresent => -7,
-  FeatureNotPresent => -8,
-  IncompatibleDriver => -9,
-  TooManyObjects => -10,
-  FormatNotSupported => -11,
-  FragmentedPool => -12,
-  SurfaceLostKHR => -1000000000,
-  NativeWindowInUseKHR => -1000000001,
-  OutOfDateKHR => -100001004,
-  IncompatibleDisplayKHR => -100003001,
-  ValidationFailedExt => -1000011001,
-  InvalidShaderNV => -1000012000,
-  OutOfPoolMemoryKHR => -1000069000,
-  InvalidExternalHandleKHR => -1000072003,
+    OutOfHostMemory => -1,
+    OutOfDeviceMemory => -2,
+    InitializationFailed => -3,
+    DeviceLost => -4,
+    MemoryMapFailed => -5,
+    LayerNotPresent => -6,
+    ExtensionNotPresent => -7,
+    FeatureNotPresent => -8,
+    IncompatibleDriver => -9,
+    TooManyObjects => -10,
+    FormatNotSupported => -11,
+    FragmentedPool => -12,
+    SurfaceLostKHR => -1000000000,
+    NativeWindowInUseKHR => -1000000001,
+    OutOfDateKHR => -100001004,
+    IncompatibleDisplayKHR => -100003001,
+    ValidationFailedExt => -1000011001,
+    InvalidShaderNV => -1000012000,
+    OutOfPoolMemoryKHR => -1000069000,
+    InvalidExternalHandleKHR => -1000072003,
 );
 
 our enum SharingMode (
-  Exclusive => 0,
-  Concurrent => 1
+    Exclusive => 0,
+    Concurrent => 1
 );

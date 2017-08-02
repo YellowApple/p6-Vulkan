@@ -6,11 +6,11 @@ unit class Vulkan::Image::View is repr('CPointer');
 use NativeCall;
 
 our enum Type (
-  1D => 0,
-  2D => 1,
-  3D => 2,
-  Cube => 3,
-  1DArray => 4,
-  2DArray => 5,
-  CubeArray => 6
+    1D => 0,
+    2D => 1,
+    3D => 2,
+    Cube => 3,
+    1DArray => 4,
+    2DArray => 5,
+    CubeArray => 6
 );

@@ -1,5 +1,5 @@
 unit module Vulkan::Allocation::Internal;
 
 our enum Type (
-  Executable => 0
+    Executable => 0
 );
