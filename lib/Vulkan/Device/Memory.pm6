@@ -18,4 +18,8 @@ our module Flags {
         DeviceLocal => 0x00000001,
         Khronos-MultiInstance => 0x00000002
     );
+    
+    our enum SparseBind (
+        Metadata => 0x00000001
+    );
 }
