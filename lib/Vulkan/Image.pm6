@@ -5,6 +5,49 @@ unit class Vulkan::Image is repr('CPointer');
 
 use NativeCall;
 
+our module Flags {
+    our enum FormatFeature (
+        SampledImage => 0x00000001,
+        StorageImage => 0x00000002,
+        StorageImageAtomic => 0x00000004,
+        UniformTexelBuffer => 0x00000008,
+        StorageTexelBuffer => 0x00000010,
+        StorageTexelBufferAtomic => 0x00000020,
+        VertexBuffer => 0x00000040,
+        ColorAttachment => 0x00000080,
+        ColorAttachmentBlend => 0x00000100,
+        DepthStencilAttachment => 0x00000200,
+        BlitSource => 0x00000400,
+        BlitDest => 0x00000800,
+        SampledImageFilterLinear => 0x00001000,
+        SampledImageFilterCubic => 0x00002000,
+        Khronos-TransferSource => 0x00004000,
+        Khronos-TransferDest => 0x00008000
+        Ext-SampledImageFilterMinMax => 0x00010000
+    );
+    
+    our enum Usage (
+        TransferSource => 0x00000001,
+        TransferDest => 0x00000002,
+        Sampled => 0x00000004,
+        Storage => 0x00000008,
+        ColorAttachment => 0x00000010,
+        DepthStencilAttachment => 0x00000020,
+        TransientAttachment => 0x00000040,
+        InputAttachment => 0x00000080
+    );
+    
+    our enum Create (
+        SparseBinding => 0x00000001,
+        SparseResidency => 0x00000002,
+        SparseAliased => 0x00000004,
+        MutableFormat => 0x00000008,
+        CubeCompatible => 0x00000010,
+        Khronos-2DArrayCompatible => 0x00000020,
+        Khronos-BindSfr => 0x00000040
+    );
+}
+
 our enum Format (
     Undefined => 0,
     R4G4-Unorm-Pack8 => 1,
