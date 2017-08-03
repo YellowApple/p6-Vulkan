@@ -4,3 +4,8 @@ unit class Vulkan::Buffer is repr('CPointer');
 # represented by a uint64 instead of a real pointer.
 
 use NativeCall;
+
+our enum IndexType (
+    UInt16 => 0,
+    UInt32 => 1
+);

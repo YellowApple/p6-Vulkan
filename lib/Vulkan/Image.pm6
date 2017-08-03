@@ -191,14 +191,14 @@ our enum Format (
     ASTC-12x10-SRGB-Block => 182,
     ASTC-12x12-UNorm-Block => 183,
     ASTC-12x12-SRGB-Block => 184,
-    PVRTC1-2BPP-UNorm-Block-Img => 1000054000,
-    PVRTC1-4BPP-UNorm-Block-Img => 1000054001,
-    PVRTC2-2BPP-UNorm-Block-Img => 1000054002,
-    PVRTC2-4BPP-UNorm-Block-Img => 1000054003,
-    PVRTC1-2BPP-SRGB-Block-Img => 1000054004,
-    PVRTC1-4BPP-SRGB-Block-Img => 1000054005,
-    PVRTC2-2BPP-SRGB-Block-Img => 1000054006,
-    PVRTC2-4BPP-SRGB-Block-Img => 1000054007
+    Imagination-PVRTC1-2BPP-UNorm-Block => 1000054000,
+    Imagination-PVRTC1-4BPP-UNorm-Block => 1000054001,
+    Imagination-PVRTC2-2BPP-UNorm-Block => 1000054002,
+    Imagination-PVRTC2-4BPP-UNorm-Block => 1000054003,
+    Imagination-PVRTC1-2BPP-SRGB-Block => 1000054004,
+    Imagination-PVRTC1-4BPP-SRGB-Block => 1000054005,
+    Imagination-PVRTC2-2BPP-SRGB-Block => 1000054006,
+    Imagination-PVRTC2-4BPP-SRGB-Block => 1000054007
 );
 
 our enum Type (
@@ -219,9 +219,9 @@ our enum Layout (
     DepthStencilAttachmentOptimal => 3,
     DepthStencilReadOnlyOptimal => 4,
     ShaderReadOnlyOptimal => 5,
-    TransferSrcOptimal => 6,
-    TransferDstOptimal => 7,
+    TransferSourceOptimal => 6,
+    TransferDestOptimal => 7,
     Preinitialized => 8,
-    PresentSrcKHR => 1000001002,
-    SharedPresentKHR => 1000111000
+    Khronos-PresentSource => 1000001002,
+    Khronos-SharedPresent => 1000111000
 );
