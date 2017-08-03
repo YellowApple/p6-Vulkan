@@ -6,6 +6,14 @@ unit class Vulkan::Pipeline is repr('CPointer');
 use NativeCall;
 
 our module Flags {
+    our enum Create (
+        DisableOptimization => 0x00000001,
+        AllowDerivatives => 0x00000002,
+        Derivative => 0x00000004,
+        Khronos-ViewIndexFromDeviceIndex => 0x00000008,
+        Khronos-Dispatch => 0x00000010
+    );
+    
     our enum Stage (
         TopOfPipe => 0x00000001,
         DrawIndirect => 0x00000002,
