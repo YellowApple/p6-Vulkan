@@ -4,3 +4,9 @@ unit class Vulkan::Fence is repr('CPointer');
 # represented by a uint64 instead of a real pointer.
 
 use NativeCall;
+
+our module Flags {
+    our enum Create (
+        Signaled => 0x00000001
+    );
+}
