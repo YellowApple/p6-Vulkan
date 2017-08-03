@@ -34,6 +34,31 @@ our module Flags {
         AllCommands => 0x00010000,
         Nvidia-CommandProcess => 0x00020000
     );
+    
+    our enum Stage::Shader (
+        Vertex => 0x00000001,
+        TessellationControl => 0x00000002,
+        TessellationEvaluation => 0x00000004,
+        Geometry => 0x00000008,
+        Fragment => 0x00000010,
+        Compute => 0x00000020,
+        AllGraphics => 0x0000001f,
+        All => 0x7fffffff
+    );
+    
+    our enum CullMode (
+        None => 0,
+        Front => 0x00000001,
+        Back => 0x00000002,
+        FrontAndBack => 0x00000003
+    );
+    
+    our enum ColorComponent (
+        Red => 0x00000001,
+        Green => 0x00000002,
+        Blue => 0x00000004,
+        Alpha => 0x00000008
+    );
 }
 
 our enum PrimitiveTopology (
