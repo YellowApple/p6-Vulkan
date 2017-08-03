@@ -4,3 +4,9 @@ unit class Vulkan::Descriptor::Pool is repr('CPointer');
 # represented by a uint64 instead of a real pointer.
 
 use NativeCall;
+
+our module Flags {
+    our enum Create (
+        FreeDescriptor => 0x00000001
+    );
+}
