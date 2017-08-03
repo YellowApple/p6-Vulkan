@@ -56,6 +56,19 @@ our module Flags {
         32Bit => 0x00000020,
         64Bit => 0x00000040
     );
+    
+    our enum Aspect (
+        Color => 0x00000001,
+        Depth => 0x00000002,
+        Stencil => 0x00000004,
+        Metadata => 0x00000008
+    );
+    
+    our enum SparseFormat (
+        SingleMiptail => 0x00000001,
+        AlignedMipSize => 0x00000002,
+        NonstandardBlockSize => 0x00000004
+    );
 }
 
 our enum Format (
