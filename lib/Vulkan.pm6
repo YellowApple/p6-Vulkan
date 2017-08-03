@@ -14,6 +14,38 @@ constant MaxMemoryHeaps = 16;
 constant MaxExtensionNameSize = 256;
 constant MaxDescriptionSize = 256;
 
+our module Flags {
+    our enum Read (
+        IndirectCommand => 0x00000001,
+        Index => 0x00000002,
+        VertexAttribute => 0x00000004,
+        Uniform => 0x00000008,
+        InputAttachment => 0x00000010,
+        Shader => 0x00000020,
+        ColorAttachment => 0x00000080,
+        DepthStencil => 0x00000200,
+        Transfer => 0x00000800,
+        Host => 0x00002000,
+        Memory => 0x00008000,
+        Nvidia-CommandProcess => 0x00020000,
+        Ext-ColorAttachmentNoncoherent => 0x00080000
+    );
+    
+    our enum Write (
+        Shader => 0x00000040,
+        ColorAttachment => 0x00000100,
+        DepthStencil => 0x00000400,
+        Transfer => 0x00001000,
+        Host => 0x00004000,
+        Memory => 0x00010000,
+        Nvidia-CommandProcess => 0x00040000
+    );
+    
+    our enum Dependency (
+        ByRegion => 0x00000001
+    );
+}
+
 our enum Result (
     Success => 0,
     NotReady => 1,
