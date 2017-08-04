@@ -273,6 +273,14 @@ our class FormatProperties is repr('CStruct') {
     has uint32 $.buffer-features;
 }
 
+our class ImageFormatProperties is repr('CStruct') {
+    has Vulkan::Extent::3D $.max-extent;
+    has uint32 $.max-mip-levels;
+    has uint32 $.max-array-layers;
+    has uint32 $.sample-counts;
+    has uint64 $.max-resource-size;
+}
+
 our enum Type (
     1D => 0,
     2D => 1,
