@@ -267,6 +267,12 @@ our enum Format (
     Imagination-PVRTC2-4BPP-SRGB-Block => 1000054007
 );
 
+our class FormatProperties is repr('CStruct') {
+    has uint32 $.linear-tiling-features;
+    has uint32 $.optimal-tiling-features;
+    has uint32 $.buffer-features;
+}
+
 our enum Type (
     1D => 0,
     2D => 1,
