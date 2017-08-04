@@ -21,6 +21,10 @@ our module Flags {
         WithAvailability => 0x00000004,
         Partial => 0x00000008
     );
+    
+    our enum Control (
+        Precise => 0x00000001
+    );
 }
 
 our enum Type (
