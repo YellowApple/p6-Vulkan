@@ -59,6 +59,12 @@ our module Flags {
         Blue => 0x00000004,
         Alpha => 0x00000008
     );
+    
+    our enum StencilFace (
+        Front => 0x00000001,
+        Back => 0x00000002,
+        FrontAndBack => 0x00000003
+    );
 }
 
 our enum PrimitiveTopology (
