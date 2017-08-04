@@ -42,7 +42,9 @@ our module Flags {
     );
     
     our enum Dependency (
-        ByRegion => 0x00000001
+        ByRegion => 0x00000001,
+        Khronos-ViewLocal => 0x00000002,
+        Khronos-DeviceGroup => 0x00000004
     );
 }
 
