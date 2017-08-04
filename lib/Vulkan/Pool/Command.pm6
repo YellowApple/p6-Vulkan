@@ -4,3 +4,14 @@ unit class Vulkan::Pool::Command is repr('CPointer');
 # represented by a uint64 instead of a real pointer.
 
 use NativeCall;
+
+our module Flags {
+    our enum Create (
+        Transient => 0x00000001,
+        ResetCommandBuffer => 0x00000002
+    );
+    
+    our enum Reset (
+        ReleaseResources => 0x00000001
+    );
+}
