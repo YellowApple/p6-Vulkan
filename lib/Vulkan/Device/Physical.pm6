@@ -175,3 +175,23 @@ our class Limits is repr('CStruct') {
     has uint64 $.optimal-buffer-copy-row-pitch-alignment;
     has uint64 $.non-coherent-atom-size;
 }
+
+our class SparseProperties is repr('CStruct') {
+    has Bool $.residency-standard-2d-block-shape;
+    has Bool $.residency-standard-2d-multisample-block-shape;
+    has Bool $.residency-standard-3d-block-shape;
+    has Bool $.residency-aligned-mip-size;
+    has Bool $.residency-non-resident-strict;
+}
+
+our class Properties is repr('CStruct') {
+    has uint32 $.api-version;
+    has uint32 $.driver-version;
+    has uint32 $.vendor-id;
+    has uint32 $.device-id;
+    has Type $.device-type;
+    has Str $.device-name;
+    has CArray[uint8] $.pipeline-cache-uuid;
+    has Limits $.limits;
+    has SparseProperties $.sparse-properties;
+}

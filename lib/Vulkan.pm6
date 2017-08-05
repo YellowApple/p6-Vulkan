@@ -312,3 +312,27 @@ our class ApplicationInfo is repr('CStruct') {
     has uint32 $.engine-version;
     has uint32 $.api-version;
 }
+
+our class ExtensionProperties is repr('CStruct') {
+    has Str $.extension-name;
+    has uint32 $.spec-version;
+}
+
+our class LayerProperties is repr('CStruct') {
+    has Str $.layer-name;
+    has uint32 $.spec-version;
+    has uint32 $.implementation-version;
+    has Str $.description;
+}
+
+our class SubmitInfo is repr('CStruct') {
+    has StructureType $.type;
+    has Pointer $.next;
+    has uint32 $.wait-semaphore-count;
+    has Vulkan::Semaphore $.wait-semaphores;
+    has uint32 $.wait-dest-stage-mask;
+    has uint32 $.command-buffer-count;
+    has CArray[Vulkan::Buffer::Command] $.command-buffers;
+    has uint32 $.signal-semaphore-count;
+    has CArray[Vulkan::Semaphore] $.signal-semaphores;
+}

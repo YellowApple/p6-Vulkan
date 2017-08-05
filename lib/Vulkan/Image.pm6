@@ -281,6 +281,12 @@ our class ImageFormatProperties is repr('CStruct') {
     has uint64 $.max-resource-size;
 }
 
+our class SparseImageFormatProperties is repr('CStruct') {
+    has uint32 $.aspect-mask;
+    has Vulkan::Extent::3D $.granularity;
+    has uint32 $.flags;
+}
+
 our enum Type (
     1D => 0,
     2D => 1,
@@ -305,3 +311,11 @@ our enum Layout (
     Khronos-PresentSource => 1000001002,
     Khronos-SharedPresent => 1000111000
 );
+
+our class SparseMemoryRequirements is repr('CStruct') {
+    has SparseImageFormatProperties $.format-properties;
+    has uint32 $.mip-tail-first-lod;
+    has uint64 $.mip-tail-size;
+    has uint64 $.mip-tail-offset;
+    has uint64 $.mip-tail-stride;
+}
